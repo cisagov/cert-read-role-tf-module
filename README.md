@@ -67,7 +67,7 @@ This meta-role requires a permission policy similar to the following:
 
 | Name | Description |
 |------|-------------|
-| arn | The EC2 instance ARN |
+| arn | The ARN corresponding to the IAM role to be used for reading certificate data for the specified hostname |
 
 ## Contributing ##
 
