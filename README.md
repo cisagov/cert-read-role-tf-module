@@ -1,6 +1,6 @@
 # cert-read-role-tf-module #
 
-[![Build Status](https://travis-ci.com/cisagov/cert-read-role-tf-module.svg?branch=develop)](https://travis-ci.com/cisagov/cert-read-role-tf-module)
+[![GitHub Build Status](https://github.com/cisagov/cert-read-role-tf-module/workflows/build/badge.svg)](https://github.com/cisagov/cert-read-role-tf-module/actions)
 
 A Terraform module for creating an IAM role for reading certificate
 data for a specified host.
@@ -67,7 +67,7 @@ This meta-role requires a permission policy similar to the following:
 
 | Name | Description |
 |------|-------------|
-| arn | The EC2 instance ARN |
+| arn | The ARN corresponding to the IAM role to be used for reading certificate data for the specified hostname |
 
 ## Contributing ##
 
