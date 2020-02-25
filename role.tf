@@ -26,7 +26,7 @@ data "aws_iam_policy_document" "assume_role_doc" {
 
 # The IAM role
 resource "aws_iam_role" "the_role" {
-  name               = "ReadCert-${var.hostname}"
+  name               = "CertificateReadOnly-${var.hostname}"
   description        = "Allows fetching the certificate data for ${var.hostname} from the ${var.cert_bucket_name} S3 bucket."
   assume_role_policy = data.aws_iam_policy_document.assume_role_doc.json
 }
