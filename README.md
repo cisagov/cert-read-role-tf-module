@@ -44,7 +44,7 @@ This meta-role requires a permission policy similar to the following:
                 "iam:PutRolePolicy",
                 "iam:GetRolePolicy"
             ],
-            "Resource": "arn:aws:iam::123456789012:role/ReadCert-*"
+            "Resource": "arn:aws:iam::123456789012:role/CertificateReadOnly-*"
         }
     ]
 }
@@ -67,7 +67,7 @@ This meta-role requires a permission policy similar to the following:
 
 | Name | Description |
 |------|-------------|
-| arn | The ARN corresponding to the IAM role to be used for reading certificate data for the specified hostname |
+| role | The IAM role to be used for reading certificate data for the specified hostname |
 
 ## Contributing ##
 
