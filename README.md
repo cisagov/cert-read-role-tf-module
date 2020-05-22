@@ -69,6 +69,12 @@ This meta-role requires a permission policy similar to the following:
 |------|-------------|
 | role | The IAM role to be used for reading certificate data for the specified hostname. |
 
+## Notes ##
+
+Running `pre-commit` requires running `terraform init` in every directory that
+contains Terraform code. In this repository, these are the main directory and
+every directory under `examples/`.
+
 ## Contributing ##
 
 We welcome contributions!  Please see [here](CONTRIBUTING.md) for
