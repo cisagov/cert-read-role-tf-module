@@ -11,7 +11,7 @@ module "cert_role" {
   source = "../../"
 
   providers = {
-    aws = "aws.cert_read_role"
+    aws = aws.cert_read_role
   }
 
   account_ids = [
