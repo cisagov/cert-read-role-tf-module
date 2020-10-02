@@ -25,6 +25,6 @@ variable "account_ids" {
 }
 
 variable "cert_path" {
-  description = "The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert_bucket_path>/site.example.com/*."
+  description = "The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert_path>/site.example.com/*"
   default     = "live"
 }

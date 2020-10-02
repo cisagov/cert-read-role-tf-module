@@ -54,20 +54,33 @@ This meta-role requires a permission policy similar to the following:
 
 * [Basic usage](https://github.com/cisagov/cert-read-role-tf-module/tree/develop/examples/basic_usage)
 
+## Requirements ##
+
+| Name | Version |
+|------|---------|
+| terraform | ~> 0.12.0 |
+| aws | ~> 2.0 |
+
+## Providers ##
+
+| Name | Version |
+|------|---------|
+| aws | ~> 2.0 |
+
 ## Inputs ##
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-------:|:--------:|
-| account_ids | AWS account IDs that are to be allowed to assume the role. | list(string) | [] | no |
-| cert_bucket_name | The name of the AWS S3 bucket where certificates are stored. | string | | yes |
-| cert_path | The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert_bucket_path>/site.example.com/*. | string | "live" | no |
-| hostname | The FQDN corresponding to the certificate to be read (e.g. site.example.com). | string | | yes |
+|------|-------------|------|---------|:--------:|
+| account_ids | AWS account IDs that are to be allowed to assume the role | `list(string)` | `[]` | no |
+| cert_bucket_name | The name of the AWS S3 bucket where certificates are stored | `any` | n/a | yes |
+| cert_path | The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert_path>/site.example.com/* | `string` | `live` | no |
+| hostname | The FQDN corresponding to the certificate to be read (e.g. site.example.com) | `any` | n/a | yes |
 
 ## Outputs ##
 
 | Name | Description |
 |------|-------------|
-| role | The IAM role to be used for reading certificate data for the specified hostname. |
+| role | The IAM role to be used for reading certificate data for the specified hostname |
 
 ## Notes ##
 
