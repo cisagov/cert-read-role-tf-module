@@ -22,7 +22,7 @@ variable "hostname" {
 
 variable "account_ids" {
   type        = list(string)
-  description = "AWS account IDs that are to be allowed to assume the role"
+  description = "AWS account IDs that are to be allowed to assume the role."
   default     = []
 }
 

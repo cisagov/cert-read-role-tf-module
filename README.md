@@ -84,7 +84,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| account\_ids | AWS account IDs that are to be allowed to assume the role | `list(string)` | `[]` | no |
+| account\_ids | AWS account IDs that are to be allowed to assume the role. | `list(string)` | `[]` | no |
 | cert\_bucket\_name | The name of the AWS S3 bucket where certificates are stored. | `string` | n/a | yes |
 | cert\_path | The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert\_path>/site.example.com/*. | `string` | `"live"` | no |
 | hostname | The FQDN corresponding to the certificate to be read (e.g. site.example.com). | `string` | n/a | yes |
