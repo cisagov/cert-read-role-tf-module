@@ -59,28 +59,41 @@ This meta-role requires a permission policy similar to the following:
 | Name | Version |
 |------|---------|
 | terraform | ~> 0.12.0 |
-| aws | ~> 3.0 |
+| aws | ~> 3.38 |
 
 ## Providers ##
 
 | Name | Version |
 |------|---------|
-| aws | ~> 3.0 |
+| aws | ~> 3.38 |
+
+## Modules ##
+
+No modules.
+
+## Resources ##
+
+| Name | Type |
+|------|------|
+| [aws_iam_role.the_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy.cert_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
+| [aws_iam_policy_document.assume_role_doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_iam_policy_document.cert_doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 
 ## Inputs ##
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| account_ids | AWS account IDs that are to be allowed to assume the role | `list(string)` | `[]` | no |
-| cert_bucket_name | The name of the AWS S3 bucket where certificates are stored | `any` | n/a | yes |
-| cert_path | The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert_path>/site.example.com/* | `string` | `live` | no |
-| hostname | The FQDN corresponding to the certificate to be read (e.g. site.example.com) | `any` | n/a | yes |
+| account\_ids | AWS account IDs that are to be allowed to assume the role. | `list(string)` | `[]` | no |
+| cert\_bucket\_name | The name of the AWS S3 bucket where certificates are stored. | `string` | n/a | yes |
+| cert\_path | The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert\_path>/site.example.com/*. | `string` | `"live"` | no |
+| hostname | The FQDN corresponding to the certificate to be read (e.g. site.example.com). | `string` | n/a | yes |
 
 ## Outputs ##
 
 | Name | Description |
 |------|-------------|
-| role | The IAM role to be used for reading certificate data for the specified hostname |
+| role | The IAM role to be used for reading certificate data for the host whose name is specified in the hostname input variable. |
 
 ## Notes ##
 
