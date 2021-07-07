@@ -5,11 +5,13 @@
 # ------------------------------------------------------------------------------
 
 variable "cert_bucket_name" {
-  description = "The name of the AWS S3 bucket where certificates are stored"
+  type        = string
+  description = "The name of the AWS S3 bucket where certificates are stored."
 }
 
 variable "hostname" {
-  description = "The FQDN corresponding to the certificate to be read (e.g. site.example.com)"
+  type        = string
+  description = "The FQDN corresponding to the certificate to be read (e.g. site.example.com)."
 }
 
 # ------------------------------------------------------------------------------
@@ -25,6 +27,7 @@ variable "account_ids" {
 }
 
 variable "cert_path" {
-  description = "The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert_path>/site.example.com/*"
+  type        = string
+  description = "The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert_path>/site.example.com/*."
   default     = "live"
 }
