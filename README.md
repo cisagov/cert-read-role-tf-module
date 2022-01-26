@@ -88,6 +88,8 @@ No modules.
 | cert\_bucket\_name | The name of the AWS S3 bucket where certificates are stored. | `string` | n/a | yes |
 | cert\_path | The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert\_path>/site.example.com/*. | `string` | `"live"` | no |
 | hostname | The FQDN corresponding to the certificate to be read (e.g. site.example.com). | `string` | n/a | yes |
+| role\_description | The description to associate with the IAM role that allows read-only access to the certificate in the specified S3 bucket.  Note that the first "%s" in this value will get replaced with the hostname variable and the second "%s" will get replaced with the cert\_bucket\_name variable. | `string` | `"Allows read-only access to the certificate data for %s from the %s S3 bucket."` | no |
+| role\_name | The name to assign the IAM role that allows read-only access to the certificate in the specified S3 bucket.  Note that the "%s" in this value will get replaced with the hostname variable. | `string` | `"CertificateReadOnly-%s"` | no |
 
 ## Outputs ##
 
