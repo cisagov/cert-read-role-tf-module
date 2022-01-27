@@ -34,12 +34,12 @@ variable "cert_path" {
 
 variable "role_description" {
   type        = string
-  description = "The description to associate with the IAM role that allows read-only access to the certificate in the specified S3 bucket.  Note that the first \"%s\" in this value will get replaced with the hostname variable and the second \"%s\" will get replaced with the cert_bucket_name variable."
+  description = "The description to associate with the IAM role that allows read-only access to the certificate in the specified S3 bucket.  Note that the first \"%s\" in this value will get replaced with the hostname variable and the second \"%s\" will get replaced with the cert_bucket_name variable.  If there are less than two instances of \"%s\" present in this value, no replacements will be made and the value will be used as is.  Including more than two instances of \"%s\" in this value will result in a Terraform error, so don't do that."
   default     = "Allows read-only access to the certificate data for %s from the %s S3 bucket."
 }
 
 variable "role_name" {
   type        = string
-  description = "The name to assign the IAM role that allows read-only access to the certificate in the specified S3 bucket.  Note that the \"%s\" in this value will get replaced with the hostname variable."
+  description = "The name to assign the IAM role that allows read-only access to the certificate in the specified S3 bucket.  Note that the \"%s\" in this value will get replaced with the hostname variable.  If there are no instances of \"%s\" present in this value, no replacement will be made and the value will be used as is.  Including more than one instance of \"%s\" in this value will result in a Terraform error, so don't do that."
   default     = "CertificateReadOnly-%s"
 }
