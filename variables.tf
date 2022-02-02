@@ -40,6 +40,6 @@ variable "role_description" {
 
 variable "role_name" {
   type        = string
-  description = "The name to assign the IAM role that allows read-only access to the certificate in the specified S3 bucket.  Note that the \"%s\" in this value will get replaced with the hostname variable.  If there are no instances of \"%s\" present in this value, no replacement will be made and the value will be used as is.  Including more than one instance of \"%s\" in this value will result in a Terraform error, so don't do that."
+  description = "The name to assign the IAM role that allows read-only access to the certificate in the specified S3 bucket.  Note that the \"%s\" in this value will get replaced with the hostname variable.  If there are no instances of \"%s\" present in this value, no replacement will be made and the value will be used as is.  Including more than one instance of \"%s\" in this value will result in a Terraform error, so don't do that.  If the role name (after hostname replacement) is longer than the current AWS limit of 64 characters, the role name will be truncated to the first 64 characters."
   default     = "CertificateReadOnly-%s"
 }
