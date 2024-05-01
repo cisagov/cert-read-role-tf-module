@@ -1,9 +1,9 @@
 # IAM assume role policy document for the IAM role
 data "aws_iam_policy_document" "assume_role_doc" {
   statement {
-    effect = "Allow"
-
     actions = ["sts:AssumeRole"]
+
+    effect = "Allow"
 
     principals {
       type        = "Service"
@@ -36,11 +36,11 @@ resource "aws_iam_role" "the_role" {
 # stored.
 data "aws_iam_policy_document" "cert_doc" {
   statement {
-    effect = "Allow"
-
     actions = [
       "s3:GetObject",
     ]
+
+    effect = "Allow"
 
     resources = [
       "arn:aws:s3:::${var.cert_bucket_name}/${var.cert_path}/${var.hostname}/*",

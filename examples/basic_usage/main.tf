@@ -1,7 +1,7 @@
 provider "aws" {
-  region  = "us-east-1"
-  profile = "certreadrole-role"
   alias   = "cert_read_role"
+  profile = "certreadrole-role"
+  region  = "us-east-1"
 }
 
 #-------------------------------------------------------------------------------
