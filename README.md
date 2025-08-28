@@ -9,7 +9,7 @@ data for a specified host.
 
 ```hcl
 module "role_site.example.com" {
-  source = "github.com/cisagov/cert-read-role-tf-module"
+  source = "github.com/cisagov/cert-read-role-tf-module?ref=v1.0.0"
 
   providers = {
     aws = "aws"
