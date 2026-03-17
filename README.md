@@ -60,14 +60,14 @@ This meta-role requires a permission policy similar to the following:
 ## Requirements ##
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | terraform | >= 1.1 |
 | aws | >= 4.9 |
 
 ## Providers ##
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | aws | >= 4.9 |
 
 ## Modules ##
@@ -77,7 +77,7 @@ No modules.
 ## Resources ##
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_iam_role.the_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role_policy.cert_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_iam_policy_document.assume_role_doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
@@ -86,7 +86,7 @@ No modules.
 ## Inputs ##
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | account\_ids | AWS account IDs that are to be allowed to assume the role. | `list(string)` | `[]` | no |
 | cert\_bucket\_name | The name of the AWS S3 bucket where certificates are stored. | `string` | n/a | yes |
 | cert\_path | The path to the certificates in the AWS S3 bucket.  For example, the certificate files for site.example.com are expected to live at <cert\_path>/site.example.com/*. | `string` | `"live"` | no |
@@ -97,7 +97,7 @@ No modules.
 ## Outputs ##
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | role | The IAM role to be used for reading certificate data for the host whose name is specified in the hostname input variable. |
 <!-- END_TF_DOCS -->
 
