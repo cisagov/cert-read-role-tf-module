@@ -12,7 +12,7 @@ Note that this example may create resources which cost money. Run
 ## Requirements ##
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | terraform | ~> 1.1 |
 | aws | ~> 6.7 |
 
@@ -23,7 +23,7 @@ No providers.
 ## Modules ##
 
 | Name | Source | Version |
-|------|--------|---------|
+| ---- | ------ | ------- |
 | cert\_role | ../../ | n/a |
 
 ## Resources ##
@@ -37,6 +37,6 @@ No inputs.
 ## Outputs ##
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | role\_arn | The ARN corresponding to the IAM role to be used for reading certificate data for site.example.com |
 <!-- END_TF_DOCS -->
